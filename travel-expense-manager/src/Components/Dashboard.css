@@ -1,0 +1,39 @@
+.ant-menu-horizontal > .ant-menu-item, .ant-menu-horizontal > .ant-menu-submenu {
+    color: white !important;
+    border-bottom: none !important;
+  }
+  .ant-menu-horizontal > .ant-menu-item:hover, .ant-menu-horizontal > .ant-menu-submenu:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+  }
+  .ant-menu-horizontal > .ant-menu-item-selected {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+  }
+
+  .table-row-light {
+    background-color: #f9f9f9;
+  }
+  
+  .table-row-dark {
+    background-color: #ffffff;
+  }
+  
+  .ant-table-thead > tr > th {
+    background-color: #e6f7ff;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .ant-table-tbody > tr > td {
+    color: #555;
+  }
+  
+  .ant-divider {
+    margin: 20px 0;
+  }
+  
+  .ant-divider-horizontal.ant-divider-with-text-left::before,
+  .ant-divider-horizontal.ant-divider-with-text-left::after {
+    border-top: 1px solid #d9d9d9;
+  }

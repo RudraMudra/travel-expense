@@ -1,0 +1,20 @@
+.expense-form-container {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-form-item {
+  margin-bottom: 16px;
+}
+
+.ant-btn-primary {
+  background: #1890ff;
+  border-color: #1890ff;
+}
+
+.ant-btn-primary:hover {
+  background: #40a9ff;
+  border-color: #40a9ff;
+}

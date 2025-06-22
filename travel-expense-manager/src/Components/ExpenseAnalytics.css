@@ -1,0 +1,57 @@
+.analytics-container {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-container h2 {
+  margin-bottom: 20px;
+}
+
+.analytics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.analytics-card {
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #e8e8e8;
+  transition: box-shadow 0.3s;
+}
+
+.analytics-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #1890ff;
+}
+
+.analytics-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.highlight {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.chart-container {
+  margin-top: 20px;
+  padding: 10px;
+  background: #f0f2f5;
+  border-radius: 4px;
+}
+
+.chart-container canvas {
+  max-width: 100%;
+}
