@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# 🧳 Travel Expense Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the **Travel Expense Manager** – because who doesn’t love tracking every penny while traveling?  
+This project is a full-stack app (React + Node.js/Express + MongoDB) that lets you submit, track, and analyze your travel expenses, so you can feel guilty about that extra coffee in Paris.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- **Expense Submission:** Log your travel, accommodation, meals, and “Other” (aka, shopping sprees) expenses.
+- **Budget Tracking:** Set a monthly budget and watch yourself go over it in real time.
+- **Analytics:** Pie charts and tables to show you exactly where your money went (spoiler: it’s always food).
+- **Group Splitting:** Split expenses with friends, because nothing says “fun trip” like arguing over who owes what.
+- **Currency Conversion:** Converts your expenses to USD, so you can cry in a single currency.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🏗️ Project Structure
 
-### `npm test`
+```
+travel-expense-manager/
+│
+├── travel-expense-manager/        # Frontend (React)
+│   └── src/
+│       └── Components/
+│           └── ExpenseForm.js
+│           └── Dashboard.js
+│       └── ...
+│
+├── travel-expense-server/         # Backend (Node.js/Express)
+│   ├── models/
+│   │   └── User.js
+│   │   └── Expense.js
+│   ├── routes/
+│   │   └── expenseRoutes.js
+│   ├── .env.example
+│   ├── .gitignore
+│   └── server.js
+│
+└── README.md
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ⚙️ Setup Instructions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Clone the repo (because you’re not writing this from scratch, right?)
+```sh
+git clone https://github.com/RudraMudra/travel-expense.git
+cd travel-expense
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Backend Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+cd travel-expense-server
+cp .env.example .env   # Or just create .env and fill in your secrets
+npm install
+npm run dev            # Or npm start if you like living dangerously
+```
 
-### `npm run eject`
+### 3. Frontend Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```sh
+cd ../travel-expense-manager
+npm install
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 4. Environment Variables
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Copy `.env.example` to `.env` in the backend folder.
+- Fill in your actual MongoDB URI, JWT secret, and Exchange Rate API key.
+- If you push your real `.env` to GitHub, may the security gods have mercy on your soul.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📝 API Endpoints (Backend)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `POST /api/expenses/submit` – Submit an expense (with JWT, please).
+- `GET /api/expenses/my` – Get your own expenses.
+- `GET /api/expenses/report` – Get a summary report.
+- `GET /api/expenses/analytics` – Get analytics (for those who love charts).
+- ...and more! Check the code if you’re curious.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🤦 Common Issues
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **“username is required”**: Your JWT probably doesn’t have a username. Fix your auth logic.
+- **CORS errors**: Because the browser hates you. Make sure your backend allows requests from your frontend.
+- **MongoDB connection fails**: Did you actually put your URI in `.env`? Or are you just hoping for the best?
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🛡️ Security
 
-### Making a Progressive Web App
+- `.env` is in `.gitignore`. If you push it, that’s on you.
+- Don’t share your JWT secret. Seriously.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🙃 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+PRs welcome! Just don’t break anything. Or do, but leave a funny comment.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📜 License
 
-### `npm run build` fails to minify
+MIT – because why not.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+**Happy expense tracking!**  
+*(And remember: the real expense is the friends you made along the way.)*
