@@ -15,34 +15,7 @@ This project is a full-stack app (React + Node.js/Express + MongoDB) that lets y
 
 ---
 
-## 🏗️ Project Structure
-
-```
-travel-expense-manager/
-│
-├── travel-expense-manager/        # Frontend (React)
-│   └── src/
-│       └── Components/
-│           └── ExpenseForm.js
-│           └── Dashboard.js
-│       └── ...
-│
-├── travel-expense-server/         # Backend (Node.js/Express)
-│   ├── models/
-│   │   └── User.js
-│   │   └── Expense.js
-│   ├── routes/
-│   │   └── expenseRoutes.js
-│   ├── .env.example
-│   ├── .gitignore
-│   └── server.js
-│
-└── README.md
-```
-
----
-
-## ⚙️ Setup Instructions
+## ⚙️ Quick Start
 
 ### 1. Clone the repo (because you’re not writing this from scratch, right?)
 ```sh
@@ -75,21 +48,12 @@ npm start
 
 ---
 
-## 📝 API Endpoints (Backend)
-
-- `POST /api/expenses/submit` – Submit an expense (with JWT, please).
-- `GET /api/expenses/my` – Get your own expenses.
-- `GET /api/expenses/report` – Get a summary report.
-- `GET /api/expenses/analytics` – Get analytics (for those who love charts).
-- ...and more! Check the code if you’re curious.
-
----
-
-## 🤦 Common Issues
+## 🤦 Common Issues & Tips
 
 - **“username is required”**: Your JWT probably doesn’t have a username. Fix your auth logic.
 - **CORS errors**: Because the browser hates you. Make sure your backend allows requests from your frontend.
 - **MongoDB connection fails**: Did you actually put your URI in `.env`? Or are you just hoping for the best?
+- **Frontend/Backend not talking?** Double-check your ports and URLs. Or just blame the network.
 
 ---
 
